@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GeneralCompanyServices } from '../../core/Interfaces';
 
 @Component({
   selector: 'app-company-services',
@@ -9,4 +10,34 @@ import { Component } from '@angular/core';
 })
 export class CompanyServicesComponent {
 
+  services: GeneralCompanyServices[] = [
+    {
+      id: 1,
+      label: "SERVICIO",
+      icon: "bi bi-activity",
+      description: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
+      url: ''
+    },
+    {
+      id: 1,
+      label: "SERVICIO",
+      icon: "bi bi-activity",
+      description: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
+      url: ''
+    },
+    {
+      id: 1,
+      label: "SERVICIO",
+      icon: "bi bi-activity",
+      description: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
+      url: ''
+    },
+    {
+      id: 1,
+      label: "SERVICIO",
+      icon: "bi bi-activity",
+      description: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
+      url: ''
+    }
+  ]
 }

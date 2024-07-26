@@ -8,54 +8,19 @@
 
   <div class="row gy-4">
 
+    @for (team of teams; track $index) {
     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
       <div class="team-member">
         <div class="member-img">
-          <img src="/img/team/team-1.jpg" class="img-fluid" alt="">
+          <img [src]="'/img/team/'+team.img" class="img-fluid" [alt]="team.img">
         </div>
         <div class="member-info">
-          <h4>Walter White</h4>
-          <span>Chief Executive Officer</span>
+          <h4>{{team.name}}</h4>
+          <span>{{team.charge}}</span>
         </div>
       </div>
     </div>
-
-    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-      <div class="team-member">
-        <div class="member-img">
-          <img src="/img/team/team-1.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="member-info">
-          <h4>Walter White</h4>
-          <span>Chief Executive Officer</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-      <div class="team-member">
-        <div class="member-img">
-          <img src="/img/team/team-1.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="member-info">
-          <h4>Walter White</h4>
-          <span>Chief Executive Officer</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-      <div class="team-member">
-        <div class="member-img">
-          <img src="/img/team/team-1.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="member-info">
-          <h4>Walter White</h4>
-          <span>Chief Executive Officer</span>
-        </div>
-      </div>
-    </div>
-
+    }
   </div>
 
 </div>

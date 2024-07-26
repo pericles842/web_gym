@@ -17,8 +17,8 @@
   <div class="row gy-4 mt-5 justify-content-center">
 
     @for (service of services_home; track $index) {
-    <div class="col-xl-4 col-md-4">
-      <div class="icon-box">
+    <div class="col-xl-2 col-md-2">
+      <div class="icon-box ">
         <i [class]="service.icon"></i>
         <h3><a href="">{{service.label}}{{ $index}}</a></h3>
       </div>

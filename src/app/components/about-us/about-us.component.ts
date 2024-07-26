@@ -17,10 +17,10 @@ import 'swiper/css/pagination';
 export class AboutUsComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper1', {
       modules: [Navigation, Pagination],
       navigation: {
-        
+
       },
       pagination: {
         el: '.swiper-pagination',
@@ -30,7 +30,7 @@ export class AboutUsComponent implements AfterViewInit {
       loop: true,
       speed: 600,
       autoplay: {
-        delay: 1500
+        delay: 5000
       },
       slidesPerView: 'auto',
       breakpoints: {
