@@ -1,16 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-/**
-* Template Name: Gp
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
+
 /* Fonts */
 :root {
     --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -638,7 +627,7 @@
     inset: 0;
     z-index: 999999;
     overflow: hidden;
-    background: #000;
+    background: #113a6d ;
     transition: all 0.6s ease-out;
   }
   
@@ -1729,3 +1718,4 @@
   .starter-section {
     /* Add your styles here */
   }
+  

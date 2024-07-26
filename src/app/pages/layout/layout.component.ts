@@ -16,7 +16,7 @@ import { FooterComponent } from "../../components/footer/footer.component";
     AboutUsComponent, CompanyServicesComponent,
     CustomersReviewsComponent,
     TeamComponent, ContactComponent,
-    FooterComponent
+    FooterComponent,
 ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
