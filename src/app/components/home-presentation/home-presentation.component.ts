@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../../core/data.service';
 import { ServiceHome } from '../../core/Interfaces';
 
 @Component({
@@ -10,20 +11,9 @@ import { ServiceHome } from '../../core/Interfaces';
 })
 export class HomePresentationComponent {
 
-  services_home: ServiceHome[] = [
-    {
-      icon: "bi bi-bullseye",
-      label: "Servicio"
-    },
-    {
-      icon: "bi bi-bullseye",
-      label: "Servicio"
-    },
-    {
-      icon: "bi bi-bullseye",
-      label: "Servicio"
-    }
-
-  ]
-
+  services_home: ServiceHome[] = []
+  
+  constructor(private dataService: DataService) { 
+    this.services_home = this.dataService.services_home
+  }
 }

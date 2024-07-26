@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GeneralCompanyServices } from '../../core/Interfaces';
+import { DataService } from '../../core/data.service';
 
 @Component({
   selector: 'app-company-services',
@@ -10,34 +11,9 @@ import { GeneralCompanyServices } from '../../core/Interfaces';
 })
 export class CompanyServicesComponent {
 
-  services: GeneralCompanyServices[] = [
-    {
-      id: 1,
-      label: "SERVICIO",
-      icon: "bi bi-activity",
-      description: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
-      url: ''
-    },
-    {
-      id: 1,
-      label: "SERVICIO",
-      icon: "bi bi-activity",
-      description: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
-      url: ''
-    },
-    {
-      id: 1,
-      label: "SERVICIO",
-      icon: "bi bi-activity",
-      description: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
-      url: ''
-    },
-    {
-      id: 1,
-      label: "SERVICIO",
-      icon: "bi bi-activity",
-      description: "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
-      url: ''
-    }
-  ]
+  services: GeneralCompanyServices[] = []
+
+  constructor(private dataService: DataService) {
+    this.services = this.dataService.services
+  }
 }

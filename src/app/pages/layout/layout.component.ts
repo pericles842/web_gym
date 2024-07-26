@@ -7,6 +7,7 @@ import { CustomersReviewsComponent } from "../../components/customers-reviews/cu
 import { TeamComponent } from "../../components/team/team.component";
 import { ContactComponent } from "../../components/contact/contact.component";
 import { FooterComponent } from "../../components/footer/footer.component";
+import { DetailServiceComponent } from "../../components/detail-service/detail-service.component";
 
 @Component({
   selector: 'app-layout',
@@ -17,6 +18,7 @@ import { FooterComponent } from "../../components/footer/footer.component";
     CustomersReviewsComponent,
     TeamComponent, ContactComponent,
     FooterComponent,
+    DetailServiceComponent
 ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../../core/data.service';
 import { TeamCompany } from '../../core/Interfaces';
 
 @Component({
@@ -10,28 +11,9 @@ import { TeamCompany } from '../../core/Interfaces';
 })
 export class TeamComponent {
 
-  teams: TeamCompany[] = [
-    {
-      img: "team-1.jpg",
-      name: "Louis Sarmiento",
-      charge: "Desarrollador"
-    },
-    {
-      img: "team-1.jpg",
-      name: "Louis Sarmiento",
-      charge: "Desarrollador"
-    }, {
-      img: "team-1.jpg",
-      name: "Louis Sarmiento",
-      charge: "Desarrollador"
-    }, {
-      img: "team-1.jpg",
-      name: "Louis Sarmiento",
-      charge: "Desarrollador"
-    }, {
-      img: "team-1.jpg",
-      name: "Louis Sarmiento",
-      charge: "Desarrollador"
-    }
-  ]
+  teams: TeamCompany[] = []
+
+  constructor(private dataService: DataService) {
+    this.teams = this.dataService.teams
+  }
 }
