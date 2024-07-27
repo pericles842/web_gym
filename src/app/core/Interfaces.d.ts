@@ -4,7 +4,8 @@ export interface ServiceHome {
 }
 
 export interface GeneralCompanyServices extends ServiceHome {
-  description: string
+  description: string,
+  detailed_description:string,
   url: string
   id: number
 }
@@ -14,3 +15,5 @@ export interface TeamCompany {
   name: string,
   charge: string
 }
+
+ 

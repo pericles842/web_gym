@@ -30,7 +30,7 @@ export class CustomersReviewsComponent implements AfterViewInit{
       autoplay: {
         delay: 1500
       },
-      slidesPerView: 1
+      slidesPerView: 2
 
     });
   }

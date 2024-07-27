@@ -86,6 +86,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+
 /* PHP Email Form Messages
   ------------------------------*/
 .php-email-form .error-message {
@@ -834,7 +835,7 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 700;
   font-family: var(--nav-font);
 }
@@ -1006,11 +1007,125 @@ section,
 /*--------------------------------------------------------------
   # Services Section
   --------------------------------------------------------------*/
-.services .service-item {
+:root {
+  --background-color-service: #113a6d;
+  --text-color-service: #fdfdfd;
+}
+
+.card {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 8px;
+  line-height: 1.5;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content-service {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px;
+  border-radius: 8px;
+  color: #343434;
+  overflow: hidden;
+  background: #fdfdfd;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content-service::before {
+
+  position: absolute;
+  content: "";
+  top: 0%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%);
+  background: var(--background-color-service);
+  z-index: -1;
+
+  transform-origin: bottom;
+
+  border-radius: inherit;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.icon-service {
+  background-color: var(--background-color-service);
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: #ffffff;
+
+}
+
+.content-service::after {
+  position: absolute;
+  content: "";
+  top: 0%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%);
+  background: var(--background-color-service);
+
+  z-index: -2;
+  transform-origin: bottom;
+  border-radius: inherit;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+.content-service .para {
+  z-index: 1;
+  opacity: 1;
+  font-size: 18px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content-service .link {
+
+  z-index: 1;
+  color: #fe0d00;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content-service .link:hover {
+
+  text-decoration: underline;
+}
+
+.card:hover {
+  transform: translate(0px, -20px);
+}
+
+.card:hover .content-service::before {
+  rotate: -4deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover .content-service::after {
+  rotate: 4deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* .services .service-item {
+  box-shadow: 0px 0 px 0 rgba(0, 0, 0, 0.1);
   background-color: var(--surface-color);
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  padding: 80px 20px;
+  padding: 80px 20px 30px 20px;
   height: 100%;
   transition: all ease-in-out 0.3s;
 }
@@ -1021,7 +1136,7 @@ section,
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  border-radius: 4px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1048,9 +1163,10 @@ section,
 }
 
 .services .service-item:hover {
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  transform: translateY(-10px);
-}
+  border-radius: 10px;
+   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1); 
+  transform: translateY(-25px);
+} */
 
 /*--------------------------------------------------------------
   # Call To Action Section
@@ -1714,4 +1830,41 @@ section,
   --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.btn-primary-custom {
+  width: 100%;
+  background-color: var(--background-color-service);
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.btn-primary-custom:hover {
+  width: 100%;
+  background-color: var(--background-color-service);
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.btn-primary-custom:active {
+  width: 100%;
+  background-color: var(--background-color-service);
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.rounded-right-shadow-image {
+
+  border-radius: 15px;
+  -webkit-box-shadow: 21px 25px 25px -13px rgba(0,0,0,0.31);
+  -moz-box-shadow: 21px 25px 25px -13px rgba(0,0,0,0.31);
+  box-shadow: 21px 25px 25px -13px rgba(0,0,0,0.31);
+}
+
+.rounded-left-shadow-image {
+
+  border-radius: 15px;
+  -webkit-box-shadow: -21px 25px 25px -13px rgba(0,0,0,0.31);
+  -moz-box-shadow: -21px 25px 25px -13px rgba(0,0,0,0.31);
+  box-shadow: -21px 25px 25px -13px rgba(0,0,0,0.31);
 }
