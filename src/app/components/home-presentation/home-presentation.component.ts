@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../core/data.service';
-import { ServiceHome } from '../../core/Interfaces';
+import { GeneralCompanyServices } from '../../core/Interfaces';
 
 @Component({
   selector: 'app-home-presentation',
@@ -11,9 +11,13 @@ import { ServiceHome } from '../../core/Interfaces';
 })
 export class HomePresentationComponent {
 
-  services_home: ServiceHome[] = []
-  
-  constructor(private dataService: DataService) { 
-    this.services_home = this.dataService.services_home
+  services_home: GeneralCompanyServices[] = []
+
+  constructor(private dataService: DataService) {
+    this.services_home = this.dataService.services
+  }
+
+  get services() {
+    return this.services_home.slice(0, 5);
   }
 }

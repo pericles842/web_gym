@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GeneralCompanyServices, ServiceHome, TeamCompany } from './Interfaces';
+import { Contact, GeneralCompanyServices, TeamCompany } from './Interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -69,30 +69,6 @@ export class DataService {
     }
   ];
 
-  services_home: ServiceHome[] = [
-    {
-      icon: "bi bi-bullseye",
-      label: "Servicio"
-    },
-    {
-      icon: "bi bi-bullseye",
-      label: "Servicio"
-    },
-    {
-      icon: "bi bi-bullseye",
-      label: "Servicio"
-    },
-    {
-      icon: "bi bi-bullseye",
-      label: "Servicio"
-    },
-    {
-      icon: "bi bi-bullseye",
-      label: "Servicio"
-    }
-
-  ]
-
   teams: TeamCompany[] = [
     {
       img: "team-1.jpg",
@@ -117,6 +93,12 @@ export class DataService {
       charge: "Desarrollador"
     }
   ]
+
+  contact: Contact = {
+    direction:'A108 Adam Street, New York, NY 535022',
+    number:'+1 5589 55488 55',
+    email:'infoexample.com'
+  }
   constructor() { }
   /**
    *Obtiene un servicio

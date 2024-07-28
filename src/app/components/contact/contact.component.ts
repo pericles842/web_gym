@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from '../../core/data.service';
+import { Contact } from '../../core/Interfaces';
 
 @Component({
   selector: 'app-contact',
@@ -8,5 +10,11 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+  contact!: Contact
 
+  constructor(
+    private dataService: DataService
+  ) { 
+    this.contact = this.dataService.contact
+  }
 }

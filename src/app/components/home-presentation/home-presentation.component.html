@@ -16,11 +16,11 @@
 
   <div class="row gy-4 mt-5 justify-content-center">
 
-    @for (service of services_home; track $index) {
-    <div class="col-xl-2 col-md-2">
+    @for (service of services; track $index) {
+    <div class="col-xl-2 col-md-2" style="cursor: pointer;">
       <div class="icon-box ">
         <i [class]="service.icon"></i>
-        <h3><a href="">{{service.label}}{{ $index}}</a></h3>
+        <h3><a >{{service.label}}</a></h3>
       </div>
     </div>
     }

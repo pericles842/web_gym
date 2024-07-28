@@ -34,6 +34,6 @@ export class DetailServiceComponent {
    * @memberof DetailServiceComponent
    */
   getService(service_id: number | string) {
-    this.dataService.getServiceDetail(parseInt(service_id as string))
+    this.service = this.dataService.getServiceDetail(parseInt(service_id as string))
   }
 }
