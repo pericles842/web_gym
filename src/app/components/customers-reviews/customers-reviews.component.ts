@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -16,7 +16,7 @@ import 'swiper/css/pagination';
 export class CustomersReviewsComponent implements AfterViewInit{
   ngAfterViewInit(): void {
     const swiper = new Swiper('.swiper', {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination,Autoplay],
       navigation: {
 
       },
@@ -26,11 +26,11 @@ export class CustomersReviewsComponent implements AfterViewInit{
         clickable: true
       },
       loop: true,
-      speed: 600,
+      speed: 800,
       autoplay: {
-        delay: 1500
+        delay: 2500
       },
-      slidesPerView: 1
+      slidesPerView: 'auto'
 
     });
   }

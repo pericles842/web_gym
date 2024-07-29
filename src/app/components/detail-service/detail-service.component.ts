@@ -4,11 +4,12 @@ import { GeneralCompanyServices } from '../../core/Interfaces';
 import { DataService } from '../../core/data.service';
 import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
+import { LoadingComponent } from "../loading/loading.component";
 
 @Component({
   selector: 'app-detail-service',
   standalone: true,
-  imports: [RouterModule, HeaderComponent, FooterComponent],
+  imports: [RouterModule, HeaderComponent, FooterComponent, LoadingComponent],
   templateUrl: './detail-service.component.html',
   styleUrl: './detail-service.component.css'
 })
