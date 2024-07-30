@@ -1,8 +1,7 @@
 
 (function () {
   "use strict";
-  ScrollReveal({ distance: '60px' });
-  ScrollReveal().reveal('#about', { origin: 'top' });
+   
   /**
    * Mobile nav toggle
    */

@@ -13,7 +13,7 @@
 
   <div class="row g-5">
     @for (service of services; track $index) {
-    <div class="col-lg-4 col-md-6">
+    <div [class]="'col-lg-4 col-md-6 animate-fade-'+$index" >
       <div (click)="getDetailService(service.id)" class="card">
         <div class="content-service">
           <div class="d-flex justify-content-center align-items-center gap-4">
