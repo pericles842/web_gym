@@ -1879,3 +1879,21 @@ section,
 .rounded-left-shadow-image:hover {
   transform: scale(1.02);
 }
+
+
+/* Para navegadores WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento vertical */
+  height: 12px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+/* Ancho del scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f88c18;
+  border-radius: 0px;
+}
+ 

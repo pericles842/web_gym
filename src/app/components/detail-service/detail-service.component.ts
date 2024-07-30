@@ -27,6 +27,8 @@ export class DetailServiceComponent {
     const service_id = this.route.snapshot.paramMap.get('id');
     this.services = this.dataService.services
     this.service = this.dataService.getServiceDetail(parseInt(service_id as string))
+    window.scrollTo(0, 0);
+
   }
   /**
    *obtiene un servicio
