@@ -1,0 +1,50 @@
+/* Configuración del video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* FONDO DEL VIDEO */
+.video-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 18, 78, 0.7), rgba(0, 0, 0, 0));
+    /* Ajusta los colores del degradado */
+    z-index: 1;
+    /* Asegura que el degradado esté encima del video */
+}
+
+#background-video {
+    position: absolute;
+    top: 90%;
+    /* POSITION DEL ARIBA ABAJO */
+    left: 100%;
+    /* POSITION DEL IZUIQERDA DERECHA*/
+    min-width: 100%;
+    /* maximo ancho del video */
+    min-height: 100%;
+    /* maximo heigh del video */
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    /* Ajusta la posición del video */
+    object-fit: cover;
+}
+
+/* Contenedor del contenido */
+.content-container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    transform: translate(0%, 70%);
+    /* Ajusta la posición del parrafo */
+}
