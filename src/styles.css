@@ -101,11 +101,23 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 500px;
+    height: 600px;
     background-image: linear-gradient(to right, #10162c, rgba(255, 255, 255, 0)), url("https://www.edenred.mx/hubfs/Media%20Source%202023%20%20%28imagenes%20blog%29/Julio/Gesti%C3%B3n%20de%20negocios%20c%C3%B3mo%20funciona%20y%205%20claves%20para%20eficientarla/gestion-de-negocios-como-funciona-y-5-claves-para-eficientarla.png");
 }
-.wave{
-    position: absolute;
-    transform: translateY();
+
+ 
+ .text-effect-wave {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--system-primary-color), #132cb7);
+    background-size: 200% 100%;
+    animation: wave 3s ease-in-out infinite;
 }
 
+@keyframes wave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}  
+
+ 
